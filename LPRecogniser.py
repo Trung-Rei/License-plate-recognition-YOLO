@@ -6,9 +6,9 @@ import numpy as np
 
 class LPRecogniser:
     def __init__(self) -> None:
-        self.lp_det = LPDetector('yolo-tinyv4-obj_last.weights', 'yolo-tinyv4-obj.cfg')
-        self.chr_det = CharDetector('yolov4-tiny-char-detect_last.weights', 'yolov4-tiny-char-detect.cfg')
-        self.chr_cls = CharClassifier('myCNN_backup_28_BN.h5')
+        self.lp_det = LPDetector('weights_and_cfg_files/yolo-tinyv4-obj_last.weights', 'weights_and_cfg_files/yolo-tinyv4-obj.cfg')
+        self.chr_det = CharDetector('weights_and_cfg_files/yolov4-tiny-char-detect_last.weights', 'weights_and_cfg_files/yolov4-tiny-char-detect.cfg')
+        self.chr_cls = CharClassifier('weights_and_cfg_files/myCNN_backup_28_BN.h5')
 
     def predict(self, im_path):
         img = cv2.imread(im_path)
