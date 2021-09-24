@@ -8,6 +8,8 @@ Cài các package cần thiết bằng lệnh:
 Chạy thử:
 > python example.py -i [PathToImage]
 
+Kết quả lưu trong `result.jpg`
+
 ## Hướng dẫn chạy server trên máy tính dùng cho mạng LAN
 
 Chạy server:
