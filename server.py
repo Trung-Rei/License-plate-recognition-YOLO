@@ -12,10 +12,10 @@ def run():
     pred_results = lp_reco.predict(path)
 
     img = cv2.imread(path)
-    img = resize_with_ratio(img, 1000/img.shape[0])
+    img = fit_to_square(img, size=1000)
     for bbox, label in pred_results:
         color = (0,255,255)
-        draw_bbox(img, label, get_real_bbox(bbox, img.shape[1], img.shape[0]), color, 2)
+        draw_bbox(img, label, yolo_to_bbox(img, bbox), color, 2)
     cv2.imwrite('web_server/result.jpg', img)
 
 class Server(BaseHTTPRequestHandler):

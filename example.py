@@ -20,8 +20,13 @@ stop = time.time()
 print(round(stop-start, 2))
 
 img = cv2.imread(path)
-img = resize_with_ratio(img, 1000/img.shape[0])
-for bbox, label in pred_results:
+img = resize_with_ratio(img, 1000/max(img.shape[:2]))
+
+bbox_only = [bbox for bbox, _ in pred_results]
+real_bboxes = recover_bbox(img, bbox_only)
+label_only = [lab for _, lab in pred_results]
+
+for bbox, label in zip(real_bboxes, label_only):
     color = (0,255,255)
-    draw_bbox(img, label, get_real_bbox(bbox, img.shape[1], img.shape[0]), color, 2)
+    draw_bbox(img, label, yolo_to_bbox(img, bbox), color, 2)
 cv2.imwrite('result.jpg', img)
