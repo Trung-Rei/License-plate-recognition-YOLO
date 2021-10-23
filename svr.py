@@ -45,4 +45,4 @@ def home():
         return send_file("static/result.jpg", mimetype="image/gif")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8888, debug=True)
+    app.run(debug=True)
