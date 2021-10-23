@@ -1,30 +1,23 @@
 # License-plate-recognition-YOLO
 
-## Hướng dẫn chạy
+**Online detector:** https://license-plate-det-by-trung.herokuapp.com/
 
-Cài các package cần thiết bằng lệnh:
+## How to run
+
+Install required packages:
 > pip install -r requirements.txt
 
-Chạy thử:
+Run:
 > python example.py -i [PathToImage]
 
-Kết quả lưu trong `result.jpg`
+Result's saved in file `result.jpg`
 
-## Hướng dẫn chạy server trên máy tính dùng cho mạng LAN
+## Use online detector
 
-Chạy server:
-> python run_server.py
+Interface:
 
-Vô trang: http://localhost:8000/
+![alt text](1.png)
 
-![alt text](im1.png)
+Select image file, hit `DETECT` and wait a bit:
 
-Chọn tệp và bấm upload, chờ một chút có kết quả trả về.
-
-![alt text](im2.png)
-
-Mở trên điện thoại cùng LAN vẫn được 😀
-
-![alt text](im3.jpeg)
-
-![alt text](im4.jpeg)
+![alt text](2.png)
