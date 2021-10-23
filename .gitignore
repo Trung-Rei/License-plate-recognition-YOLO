@@ -10,4 +10,4 @@ __pycache__/YOLODetector.cpython-38.pyc
 web_server/.DS_Store
 web_server/result.jpg
 web_server/test.jpg
-result.jpg
+static/in_img.jpg
