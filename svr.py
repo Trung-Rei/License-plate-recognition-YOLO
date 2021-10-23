@@ -31,7 +31,7 @@ app.config["UPLOAD_FOLDER"] = "static"
 @app.route("/", methods=["POST", "GET"])
 def home():
     if request.method == "GET":
-        return render_template("indextml")
+        return render_template("index.html")
     else:
         # lay anh upload
         img_file = request.files["file"]
@@ -45,4 +45,4 @@ def home():
         return send_file("static/result.jpg", mimetype="image/gif")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=443, debug=True)
+    app.run(host="0.0.0.0", port=8888, debug=True)
